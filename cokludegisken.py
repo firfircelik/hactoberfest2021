@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Aug 24 21:31:24 2021
-
-@author: firat
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -46,10 +38,6 @@ ohe = preprocessing.OneHotEncoder()
 c = ohe.fit_transform(c).toarray()
 print(c)
 
-
-#print(ulke)
-
-#kolona eklenen ulkelere isim veriliyor sonuc şeklinde dataframe oluşturuluyor
 sonuc = pd.DataFrame(data=ulke , index  = range(22) , columns = ['fr','tr','us'])
 #print(sonuc)
 
@@ -65,9 +53,6 @@ s = pd.concat([sonuc,sonuc2], axis=1)
 #print(s)
 
 s2 = pd.concat([s,sonuc3], axis = 1)
-
-#print(s2)
-
 
 from sklearn.model_selection import train_test_split
 #test datası test ve train datası olarak ayrılıyor. s dataframe kullanılarak sonuc3 dataframe tahminleniyor
